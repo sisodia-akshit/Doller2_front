@@ -1,0 +1,23 @@
+.rooms{
+    margin: 3rem 5rem;
+}
+.roomName{
+    border:.5px solid #fff;
+    padding: 0 2rem;
+    margin: .5rem 0;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #f0f0f0;
+        & a{
+            color: #000;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .rooms{
+        margin: .5rem 1rem;
+    }
+
+}

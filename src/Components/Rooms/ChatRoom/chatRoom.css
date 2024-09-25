@@ -1,0 +1,185 @@
+.chatRoom {
+    box-sizing: border-box;
+    margin: 0rem 0rem;
+    border: 2px solid #ffffff64;
+    height: 100vh;
+    border-radius: 5px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.ChatRoomHead {
+    background-color: #000000;
+    border: .5px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    z-index: 1;
+    display: flex;
+
+    & .leaveChatBtn {
+        height: 100%;
+        padding: 0 2rem;
+        align-content: center;
+        border-right: .5px solid #fff;
+    }
+
+    & .roomHeaderItems {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &>p {
+            text-align: center;
+            width: 100%;
+            padding: 0 1rem
+        }
+
+        &>button {
+            height: 100%;
+            padding: 0rem 2rem;
+            background-color: #000;
+            color: #fff;
+            border: .5px solid #fff;
+            font-size: 1rem
+        }
+    }
+}
+
+.usersList{
+    
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color:transparent;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 2;
+
+    & button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        background-color: #000;
+        border: .3px solid #fff9;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    & li{
+        width: 100%;
+        border: .5px solid  #fff;
+        font-size: 1.4rem;
+        padding: .5rem 2rem;
+        color: #0f0;
+
+
+
+    }
+}
+.messageSender {
+    color: rgb(34, 255, 0);
+}
+
+.chatboxBottom {
+    position: relative;
+    height: 12%;
+    bottom: 0;
+    width: 100%;
+
+    &>p {
+        /* background-color: red; */
+        box-sizing: border-box;
+        padding: .2rem 0;
+        font-size: 1.1rem;
+        margin: 0 2rem .5rem 2rem;
+        border-radius: 5px;
+    }
+
+    & .sendMsg {
+        height: 50px;
+        display: flex;
+        padding: 0rem 1rem;
+
+        & input {
+            width: 90%;
+            font-size: 1.2rem;
+            padding-left: 1rem;
+            color: #fff;
+            background-color: #000;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border: .5px solid #ffffff9f;
+        }
+
+        & button {
+            width: 10%;
+            min-width: 100px;
+            background-color: #000;
+            color: #ffffff;
+            font-size: 1.3rem;
+            border: 1px solid #fff;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+
+
+}
+
+.messageBox {
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 88%;
+    background-color: rgb(0, 0, 0);
+    overflow-y: scroll;
+    padding: 0 1rem;
+    padding-bottom: 35px;
+    padding-top: 7rem;
+
+
+    & .senderMessage {
+        display: inline-block;
+        padding: 0.2rem 1rem;
+        background-color: #ffffff6a;
+        margin: .3rem 0rem;
+        border-radius: 5px;
+    }
+
+    & .othersMessage {
+        display: inline-block;
+        padding: 0.2rem 1rem;
+        border: .5px solid #ffffff9f;
+        margin: .3rem 0rem;
+        border-radius: 5px;
+    }
+}
+
+.messageBox::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    .chatRoom {
+        margin: 0rem 0rem;
+    }
+
+    .chatBox {
+        & .SendMsg {
+            margin-right: 0rem;
+        }
+    }
+
+
+}
